@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro"
+import Prose from "../components/Prose.astro";
+import {getCollection} from 'astro:content';
+const docs = await getCollection('docs');
+
+
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Astro Basics</title>
+</head>
+<body>
+<Header/>
+<main class="flex">
+    <div class="flex h-screen flex-col justify-between border-e border-gray-100 bg-white">
+        <div class="px-4 py-6">
+            <ul class="mt-6 space-y-1">
+                {
+                    docs.map((post) => (
+                        <li class="rounded-md px-2 py-1 hover:bg-gray-100">
+                            <a href={`/docs/${post.id}`}>{post.id}</a>
+                        </li>
+                    ))
+                }
+
+            </ul>
+        </div>
+    </div>
+    <div>
+        <Prose>
+            <slot />
+        </Prose>
+
+    </div>
+    <div>
+        <slot name="after-footer"  />
+    </div>
+</main>
+<Footer/>
+</body>
+</html>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>

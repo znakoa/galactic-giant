@@ -1,0 +1,44 @@
+---
+import  IndexContent from "../../layouts/IndexContent.astro"
+---
+<IndexContent>
+    <div class={'max-w-screen overflow-x-hidden'}>
+        <div class={'fixed inset-x-0 top-0 z-10 border-b border-black/5 dark:border-white/10 '}>
+            <div class={'flex h-14 items-center justify-between gap-8 px-4 sm:px-6'}>
+                <div>
+
+                    <a
+                            class="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
+                            href="/"
+                    >
+                        Get Started
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class={'grid min-h-dvh grid-cols-1 grid-rows-[1fr_1px_auto_1px_auto] justify-center pt-14.25 [--gutter-width:2.5rem] md:-mx-4 md:grid-cols-[var(--gutter-width)_minmax(0,var(--breakpoint-2xl))_var(--gutter-width)] lg:mx-0'}>
+            <div class={'col-start-1 row-span-full row-start-1 hidden border-x  border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:block dark:[--pattern-fg:var(--color-white)]/10'}></div>
+            <div class={'grid grid-cols-1 xl:grid-cols-[22rem_2.5rem_auto] xl:grid-rows-[1fr_auto]'}>
+                <div class="col-start-2 row-span-2 border-r border-l border-gray-950/5 max-xl:hidden dark:border-white/10"></div>
+                <div class={'max-xl:mx-auto max-xl:w-full max-xl:max-w-(--breakpoint-md) h-1/2'}>
+                    <div class={'mt-16 px-4 font-mono text-sm/7 font-medium tracking-widest text-gray-500 uppercase lg:px-2'}>
+
+                    </div>
+                    <div class={'mb-6 px-4 lg:px-2 xl:mb-16 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]'}>
+                        苏木
+                    </div>
+                </div>
+                <div class={'max-xl:mx-auto max-xl:w-full max-xl:max-w-(--breakpoint-md)'}>
+                    <div></div>
+                </div>
+                <div class={'max-xl:mx-auto max-xl:mt-16 max-xl:w-full max-xl:max-w-(--breakpoint-md)'}>
+                    <div class={'px-4 py-2 lg:px-2 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw] h-[70px]'}></div>
+                </div>
+            </div>
+            <div
+                    class={'row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:col-start-3 md:block dark:[--pattern-fg:var(--color-white)]/10'}></div>
+        </div>
+    </div>
+</IndexContent>
+

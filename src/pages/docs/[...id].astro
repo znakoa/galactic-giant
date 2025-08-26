@@ -1,0 +1,29 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import { getCollection, render,getEntry } from 'astro:content';
+// 1. 为每个集合条目生成一个新路径
+export async function getStaticPaths() {
+    const docs = await getCollection('docs');
+    return docs.map(docs => ({
+        params: { id: docs.id },
+        props: { docs },
+    }));
+}
+const { docs } = Astro.props;
+
+const { Content,headings } = await render(docs);
+
+console.log(headings)
+
+---
+<DocsLayout>
+    <Content />
+    <div class="flex flex-col" slot="after-footer">
+        {headings.map((heading) => (
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+
+        ))}
+    </div>
+</DocsLayout>
+
+
